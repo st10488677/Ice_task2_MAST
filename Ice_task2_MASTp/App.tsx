@@ -13,13 +13,13 @@ import {
 export default function GodOfWarUI() {
   const [modalVisible, setModalVisible] = useState(false);
 
-  // Example list of God of War weapons
+  // list of God of War weapons
   const weapons = [
     { id: "1", name: "Leviathan Axe" },
     { id: "2", name: "Blades of Chaos" },
     { id: "3", name: "Draupnir Spear" },
   ];
-
+// god of war ui
   return (
     <View style={styles.container}>
       {/* BUTTON */}
@@ -29,7 +29,7 @@ export default function GodOfWarUI() {
         color="#8B0000"
         onPress={() => alert("KRATOS: Boy!")}
       />
-
+// rage button
       {/* TOUCHABLEOPACITY */}
       <Text style={styles.label}>TouchableOpacity: Spartan Rage Trigger</Text>
       <TouchableOpacity
@@ -38,16 +38,16 @@ export default function GodOfWarUI() {
       >
         <Text style={styles.touchableText}>UNLEASH RAGE</Text>
       </TouchableOpacity>
-
+// image of god of war
       {/* IMAGE */}
       <Text style={styles.label}>Image: God of War Icon</Text>
       <Image
         source={{
-          uri: "https://upload.wikimedia.org/wikipedia/en/a/a7/God_of_War_4_cover.jpg",
+          uri: "https://upload.wikimedia.org/wikipedia/en/a/a7/God_of_War_4_cover.jpg", // isnt loading my image so used ai for image
         }}
         style={styles.image}
       />
-
+//atreus button
       {/* MODAL */}
       <Text style={styles.label}>Modal: Atreus Calling</Text>
       <Button title="Hear Atreus" onPress={() => setModalVisible(true)} />
@@ -60,7 +60,7 @@ export default function GodOfWarUI() {
         <View style={styles.modalOverlay}>
           <View style={styles.modalContent}>
             <Text style={styles.modalText}>
-              ATREUS: Father, look! Enemies ahead!
+              ATREUS: Father, look! Enemies ahead! // atreus statement
             </Text>
             <Button
               title="Close"
@@ -77,7 +77,7 @@ export default function GodOfWarUI() {
         data={weapons}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => (
-          <Text style={styles.weaponItem}>⚔️ {item.name}</Text>
+          <Text style={styles.weaponItem}> {item.name}</Text>
         )}
       />
     </View>
@@ -89,7 +89,7 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: 20,
     gap: 20,
-    backgroundColor: "#1C1C1C", // dark background
+    backgroundColor: "#1C1C1C", // black background
   },
   label: {
     fontSize: 14,
@@ -98,7 +98,7 @@ const styles = StyleSheet.create({
     color: "#E5E5E5",
   },
   touchable: {
-    backgroundColor: "#8B0000", // blood red
+    backgroundColor: "#8B0000", // red colour
     padding: 12,
     borderRadius: 10,
     alignItems: "center",
